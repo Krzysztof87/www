@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Feynman Diagram</title>
+</head>
+
+<body>
+<p>Kordynaty pliku do rysowania</p>
+<embed src="/home/don/www/feynmantest.xml" width="150" height="500"></embed>
+<script>
+function pokazCzas() {
+  var monthsArr = ["stycznia", "lutego", "marca", "kwietnia",
+  "maja", "czerwca", "lipca", "sierpnia", "września",
+  "października", "listopada", "grudnia"
+  ];
+ 
+  var daysArr = ["Niedziela", "Poniedziałek", "Wtorek", "Środa",
+                 "Czwartek", "Piątek", "Sobota"];
+ 
+  var dateObj = new Date();
+ 
+  var year = dateObj.getFullYear();
+  var month = dateObj.getMonth();
+  var numDay = dateObj.getDate();
+  var day = dateObj.getDay();
+  var hour = dateObj.getHours();
+  var minute = dateObj.getMinutes();
+  var second = dateObj.getSeconds();
+ 
+  if (minute < 10) minute = "0" + minute;
+ 
+  if (second < 10) second = "0" + second;
+ 
+  var output = daysArr[day] + ", " + numDay + " " + monthsArr[month] 
+  + " " + year + " roku, godzina " + hour + ":" + minute + ":" + second;
+ 
+  return output;
+}
+ 
+alert(pokazCzas());
+</script>
+
+</body>
+
+</html> 
